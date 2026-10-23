@@ -10,5 +10,7 @@
 	"block.soulkeeper.soul_anchor.status": "Soul Anchor of %s  •  %s stacks  •  %s XP  •  %s %s %s",
 	"block.soulkeeper.soul_anchor.empty": "This Soul Anchor is empty.",
 	"block.soulkeeper.soul_anchor.protected": "This Soul Anchor belongs to %s.",
+	"block.soulkeeper.soul_anchor.public": "This Soul Anchor is now public.",
+	"block.soulkeeper.soul_anchor.private": "This Soul Anchor is now private.",
 	"death.soulkeeper.grave": "Your gear is sealed in a Soul Anchor in %s at %s %s %s. A Soul Compass will guide you back."
 }

@@ -31,6 +31,7 @@ public class SoulAnchorBlockEntity extends BlockEntity {
 	private String ownerName = "";
 	@Nullable
 	private UUID ownerUuid;
+	private boolean publicAccess;
 	private boolean released;
 
 	public SoulAnchorBlockEntity(BlockPos pos, BlockState state) {
@@ -56,6 +57,18 @@ public class SoulAnchorBlockEntity extends BlockEntity {
 
 	public String getOwnerName() {
 		return ownerName;
+	}
+
+	public boolean isPublic() {
+		return publicAccess;
+	}
+
+	public void setPublic(boolean value) {
+		this.publicAccess = value;
+		markDirty();
+		if (world instanceof ServerWorld serverWorld) {
+			serverWorld.getChunkManager().markForUpdate(pos);
+		}
 	}
 
 	public Text getStatusText() {
@@ -119,6 +132,7 @@ public class SoulAnchorBlockEntity extends BlockEntity {
 		if (ownerUuid != null) {
 			nbt.putUuid("OwnerUuid", ownerUuid);
 		}
+		nbt.putBoolean("Public", publicAccess);
 	}
 
 	@Override
@@ -133,6 +147,7 @@ public class SoulAnchorBlockEntity extends BlockEntity {
 		storedXp = nbt.getInt("StoredXp");
 		ownerName = nbt.getString("OwnerName");
 		ownerUuid = nbt.containsUuid("OwnerUuid") ? nbt.getUuid("OwnerUuid") : null;
+		publicAccess = nbt.getBoolean("Public");
 	}
 
 	public static void tick(World world, BlockPos pos, BlockState state, SoulAnchorBlockEntity anchor) {

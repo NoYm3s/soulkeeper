@@ -10,5 +10,7 @@
 	"block.soulkeeper.soul_anchor.status": "Якорь душ игрока %s  •  %s стаков  •  %s опыта  •  %s %s %s",
 	"block.soulkeeper.soul_anchor.empty": "Этот Якорь душ пуст.",
 	"block.soulkeeper.soul_anchor.protected": "Этот Якорь душ принадлежит игроку %s.",
+	"block.soulkeeper.soul_anchor.public": "Этот Якорь душ теперь публичный.",
+	"block.soulkeeper.soul_anchor.private": "Этот Якорь душ теперь приватный.",
 	"death.soulkeeper.grave": "Ваши вещи запечатаны в Якоре душ в измерении %s на координатах %s %s %s. Компас душ укажет путь."
 }

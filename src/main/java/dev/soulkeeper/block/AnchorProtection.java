@@ -15,9 +15,14 @@ public final class AnchorProtection {
 				return true;
 			}
 
-			if (!SoulkeeperConfig.protectAnchors() || anchor.isOwner(player)) {
+			if (!SoulkeeperConfig.protectAnchors()) {
 				return true;
 			}
+
+			if (anchor.isOwner(player) || anchor.isPublic()) {
+				return true;
+			}
+
 			player.sendMessage(Text.translatable(
 				"block.soulkeeper.soul_anchor.protected",
 				anchor.getOwnerName()

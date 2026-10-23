@@ -20,7 +20,8 @@ Soulkeeper offers a middle ground:
 - **Soul Anchor** — stores your items and XP where you died.
 - **Soul Compass** — automatically provided after death; shows direction, distance, coordinates, and warns when the anchor is in another dimension.
 - **Soulbound enchantment** — keeps an item in your inventory after death and costs 10% of its maximum durability by default (at least 1 point, never breaking it); the percentage is configurable.
-- **Owner protection** — only the anchor's owner can break it and recover the contents.
+- **Owner protection** — only the anchor's owner can break it and recover the contents by default.
+- **Public anchors** — sneak + right-click with an iron ingot to toggle public access so anyone can recover the anchor's contents.
 - **Curse of Vanishing compatibility** — vanishing items are destroyed instead of being stored.
 - **Full XP recovery** — break the anchor to get your stored experience back.
 - **Vanilla-style interaction** — right-click the anchor for its status, break it to recover the contents.
@@ -54,7 +55,7 @@ On death, Soulbound items stay with you and lose 10% of their maximum durability
 
 When a player dies, Soulkeeper collects the non-Soulbound inventory and XP into a Soul Anchor. The anchor is placed at the first air or replaceable block above the death position (up to 32 blocks); if the player died in the void, the world spawn is used. A bound Soul Compass is added to the player's inventory and a message with the anchor coordinates is sent after respawn.
 
-Only the owner can break the anchor and recover its contents; other players receive an action-bar message. Right-clicking it shows the owner, stored stacks, XP, and coordinates.
+Only the owner can break the anchor and recover its contents by default; other players receive an action-bar message. Sneak + right-click with an iron ingot to toggle public access. Right-clicking it shows the owner, stored stacks, XP, and coordinates.
 
 If only Soulbound items were in the inventory and there was no XP, no anchor is created.
 
@@ -87,7 +88,7 @@ Install the mod on both the server and the client so the custom block, item, and
 
 - `keepInventory=true` disables Soul Anchor creation.
 - The mod cancels vanilla inventory dropping for handled deaths, so it may conflict with other grave or inventory-retention mods.
-- Anchors are protected from other players by default. Set `protectAnchors` to `false` for free-for-all access; explosions and other world damage can still destroy the block.
+- Anchors are protected from other players by default. Use sneak + iron ingot to make an anchor public, or set `protectAnchors` to `false` for free-for-all access; explosions and other world damage can still destroy the block.
 - Anchors are highly blast resistant but not completely immune to destruction.
 - The compass continues to point at the stored coordinates even if the anchor is later removed or moved.
 - There is no in-game configuration screen or anchor GUI; settings live in `config/soulkeeper.json`.
