@@ -1,0 +1,13 @@
+{
+	"item.soulkeeper.soul_compass": "Soul Compass",
+	"block.soulkeeper.soul_anchor": "Soul Anchor",
+	"enchantment.soulkeeper.soulbound": "Soulbound",
+	"enchantment.soulkeeper.soulbound.desc": "Keeps this item in your inventory when you die, at the cost of 10% durability.",
+	"item.soulkeeper.soul_compass.unbound": "This compass is not bound to a soul. Use it on a Soul Anchor.",
+	"item.soulkeeper.soul_compass.bound": "The compass now points to this Soul Anchor.",
+	"item.soulkeeper.soul_compass.point": "Soul: %s  •  %s blocks  •  %s %s %s",
+	"item.soulkeeper.soul_compass.other_dimension": "Your soul rests in another dimension: %s",
+	"block.soulkeeper.soul_anchor.status": "Soul Anchor of %s  •  %s stacks  •  %s XP  •  %s %s %s",
+	"block.soulkeeper.soul_anchor.empty": "This Soul Anchor is empty.",
+	"death.soulkeeper.grave": "Your gear is sealed in a Soul Anchor in %s at %s %s %s. A Soul Compass will guide you back."
+}

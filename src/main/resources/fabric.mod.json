@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "soulkeeper",
+	"version": "${version}",
+	"name": "Soulkeeper",
+	"description": "Death leaves a Soul Anchor instead of scattering your gear. A Soul Compass guides you back, and the Soulbound enchantment keeps your favourite equipment through death.",
+	"authors": [
+		"Soulkeeper Team"
+	],
+	"contact": {},
+	"license": "MIT",
+	"icon": "assets/soulkeeper/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.soulkeeper.Soulkeeper"
+		]
+	},
+	"mixins": [
+		"soulkeeper.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": ">=1.21 <1.21.2",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

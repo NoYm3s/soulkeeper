@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"pattern": [
+		"SSS",
+		"SAS",
+		"SSS"
+	],
+	"key": {
+		"S": {
+			"item": "minecraft:soul_soil"
+		},
+		"A": {
+			"item": "minecraft:amethyst_shard"
+		}
+	},
+	"result": {
+		"id": "soulkeeper:soul_anchor",
+		"count": 1
+	}
+}
