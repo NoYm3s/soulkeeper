@@ -1,5 +1,6 @@
 package dev.soulkeeper;
 
+import dev.soulkeeper.block.AnchorProtection;
 import dev.soulkeeper.block.ModBlocks;
 import dev.soulkeeper.block.entity.ModBlockEntities;
 import dev.soulkeeper.death.DeathHandler;
@@ -21,9 +22,11 @@ public final class Soulkeeper implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		SoulkeeperConfig.load();
 		ModBlocks.register();
 		ModBlockEntities.register();
 		ModItems.register();
+		AnchorProtection.register();
 		DeathHandler.register();
 
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {

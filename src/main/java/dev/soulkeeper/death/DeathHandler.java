@@ -1,6 +1,7 @@
 package dev.soulkeeper.death;
 
 import dev.soulkeeper.Soulkeeper;
+import dev.soulkeeper.SoulkeeperConfig;
 import dev.soulkeeper.block.ModBlocks;
 import dev.soulkeeper.block.entity.SoulAnchorBlockEntity;
 import dev.soulkeeper.item.ModItems;
@@ -185,11 +186,12 @@ public final class DeathHandler {
 		}
 
 		int maxDamage = stack.getMaxDamage();
-		if (maxDamage <= 1) {
+		int percent = SoulkeeperConfig.soulboundDamagePercent();
+		if (maxDamage <= 1 || percent <= 0) {
 			return;
 		}
 
-		int penalty = Math.max(1, maxDamage / 10);
+		int penalty = Math.max(1, maxDamage * percent / 100);
 		stack.setDamage(Math.min(maxDamage - 1, stack.getDamage() + penalty));
 	}
 

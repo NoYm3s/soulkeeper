@@ -2,12 +2,13 @@
 	"item.soulkeeper.soul_compass": "Компас душ",
 	"block.soulkeeper.soul_anchor": "Якорь душ",
 	"enchantment.soulkeeper.soulbound": "Связанный с душой",
-	"enchantment.soulkeeper.soulbound.desc": "Сохраняет предмет в инвентаре после смерти, но отнимает 10% прочности.",
+	"enchantment.soulkeeper.soulbound.desc": "Сохраняет предмет в инвентаре после смерти ценой прочности.",
 	"item.soulkeeper.soul_compass.unbound": "Компас не привязан к душе. Используйте его на Якоре душ.",
 	"item.soulkeeper.soul_compass.bound": "Компас теперь указывает на этот Якорь душ.",
 	"item.soulkeeper.soul_compass.point": "Душа: %s  •  %s блоков  •  %s %s %s",
 	"item.soulkeeper.soul_compass.other_dimension": "Ваша душа покоится в другом измерении: %s",
 	"block.soulkeeper.soul_anchor.status": "Якорь душ игрока %s  •  %s стаков  •  %s опыта  •  %s %s %s",
 	"block.soulkeeper.soul_anchor.empty": "Этот Якорь душ пуст.",
+	"block.soulkeeper.soul_anchor.protected": "Этот Якорь душ принадлежит игроку %s.",
 	"death.soulkeeper.grave": "Ваши вещи запечатаны в Якоре душ в измерении %s на координатах %s %s %s. Компас душ укажет путь."
 }

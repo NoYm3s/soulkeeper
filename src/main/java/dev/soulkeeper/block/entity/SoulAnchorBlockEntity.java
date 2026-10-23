@@ -50,6 +50,14 @@ public class SoulAnchorBlockEntity extends BlockEntity {
 		markDirty();
 	}
 
+	public boolean isOwner(PlayerEntity player) {
+		return ownerUuid == null || ownerUuid.equals(player.getUuid());
+	}
+
+	public String getOwnerName() {
+		return ownerName;
+	}
+
 	public Text getStatusText() {
 		int stacks = 0;
 		for (ItemStack stack : items) {
